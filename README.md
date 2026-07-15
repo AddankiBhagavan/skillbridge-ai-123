@@ -1,90 +1,74 @@
 # SkillBridge AI
 
-AI-powered career guidance platform that analyzes a student's interests, current skills, and career goals to deliver personalized career recommendations, skill gap analysis, and learning roadmaps. Built for students from rural and underserved communities.
+## Theme
+Theme 1 – Sustainability & Social Impact
 
-## Problem
-Students, especially from rural and underserved communities, lack access to personalized career guidance. They don't know which skills to learn, which career path suits them, or how to prepare for internships and jobs.
+## Problem Statement
+Many students struggle to identify suitable career paths, understand their skill gaps, and create a structured learning roadmap. Traditional career guidance is often expensive or inaccessible.
 
 ## Solution
-SkillBridge AI uses Google Gemini 2.5 Flash to analyze student profiles and generate:
-1. Top 3 suitable career paths with match scores
-2. Skill gap analysis with priority levels
-3. 30-day and 90-day learning roadmaps
-4. Recommended projects with difficulty levels
-5. Recommended certifications
-6. Personalized career advice
+SkillBridge AI is an AI-powered career guidance platform that uses Google Gemini AI to analyze a student's profile and generate personalized career recommendations, skill-gap analysis, learning roadmaps, project suggestions, and certification recommendations.
+
+## Features
+- AI Career Recommendations
+- Skill Gap Analysis
+- 30-Day Learning Roadmap
+- 90-Day Learning Roadmap
+- Project Recommendations
+- Certification Suggestions
+- Responsive UI
+- Real-time AI Analysis using Gemini
 
 ## Tech Stack
-- React 18
+- React
 - TypeScript
 - Vite
 - Tailwind CSS
-- Google Gemini AI (`@google/generative-ai`)
-- Lucide React (icons)
+- Google Gemini AI
+- GitHub
+- Vercel
 
-## Gemini AI Integration
+## AI Implementation
+The platform uses Google Gemini 2.5 Flash as the core intelligence layer.
 
-This project uses **Google Gemini 2.5 Flash** to generate real, personalized career analysis based on each student's profile.
+User Inputs:
+- Education
+- Skills
+- Interests
+- Career Goal
 
-### Setup Instructions
+AI Generates:
+- Career Recommendations
+- Skill Gap Analysis
+- Learning Roadmaps
+- Project Ideas
+- Certifications
+- Career Guidance
 
-1. Get a Gemini API key from [Google AI Studio](https://aistudio.google.com/apikey)
+## Live Demo
+https://your-vercel-url.vercel.app
 
-2. Add the API key to your `.env` file:
-   ```
-   VITE_GEMINI_API_KEY=your_api_key
-   ```
+## GitHub Repository
+https://github.com/your-username/skillbridge-ai
 
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
+## Installation
 
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-5. Build for production:
-   ```bash
-   npm run build
-   ```
-
-### Environment Variable
-```
-VITE_GEMINI_API_KEY=your_api_key
+```bash
+npm install
+npm run dev
 ```
 
-The API key is read via `import.meta.env.VITE_GEMINI_API_KEY` in `src/services/gemini.ts`.
+## Environment Variables
 
-### How It Works
+```env
+VITE_GEMINI_API_KEY=xxxxxxxxxxxxxx
+```
 
-1. Student fills out the **Profile Page** (name, education, skills, interests, career goal)
-2. Clicking **"Analyze with AI"** calls `generateCareerAnalysis()` in `src/services/gemini.ts`
-3. Gemini 2.5 Flash returns structured JSON with career paths, skill gaps, roadmaps, projects, certifications, and advice
-4. Results are displayed on the **Analysis Page** with 7 dedicated sections
+## Future Enhancements
+- Resume Analyzer
+- Job Recommendation Engine
+- Internship Matching
+- Progress Tracking Dashboard
 
-### Error Handling
-- Missing API key: shows a clear message asking to configure `VITE_GEMINI_API_KEY`
-- Invalid API key: shows an "invalid API key" error
-- API failures: shows a user-friendly error message with a retry option
-- If no AI analysis has been run yet, the Analysis page shows demo fallback data
-
-## Features
-- AI-powered career recommendations (top 3 paths with match scores)
-- Skill gap analysis with visual progress bars
-- 30-day and 90-day learning roadmaps
-- Recommended projects and certifications
-- Personalized AI career advice
-- 6-month roadmap timeline with milestones
-- Progress dashboard with streaks, achievements, and weekly activity charts
-- Fully responsive, modern SaaS-style UI
-- Smooth animations and micro-interactions
-
-## Pages
-1. **Landing Page** — Hero, problem statement, how it works, features, impact, CTA
-2. **Student Profile Page** — Form with skills/interests chips, AI analysis trigger
-3. **AI Career Analysis Page** — 7 sections of AI-generated results
-4. **Learning Roadmap Page** — 6-month timeline with monthly milestones
-5. **Progress Dashboard** — Stats, charts, achievements, upcoming tasks
-6. **About Project Page** — Problem, solution, social impact, future scope
+## Author
+Bhagavan Singh
